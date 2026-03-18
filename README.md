@@ -205,15 +205,29 @@ Click the top-right corner to open the user center, which includes:
 
 > A: Right-click the installer and select **Run as administrator**.
 
-**Q: macOS shows “The app is damaged”?**
+**Q: The application cannot be opened after installation on Linux?**
 
-> A: Run `sudo xattr -rd com.apple.quarantine /Applications/Penligent.app`
+> A:
+1 Do not install the application as the root user in the terminal. Instead, install it using your logged-in user with the sudo command.
+2 The issue may be caused by missing dependencies. Install the required dependencies according to the prompt, or install common dependencies using:
+```
+sudo apt install -f
+```
 
 ### Login Issues
 
 **Q: Not receiving the verification email?**
 
 > A: 1) Check the spam folder; 2) confirm the email address is correct; 3) try resending.
+
+**Q: The application cannot open the login web page?**
+
+> Check whether the browser was opened but failed to redirect properly.
+The issue may be caused by the local network. Try checking or switching your network connection.
+You can also try temporarily disabling local IPv6:
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
 
 ### Usage Issues
 
