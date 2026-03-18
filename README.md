@@ -46,7 +46,6 @@ For first-time use, you need to configure the required runtime environment.
 | Python Executable Path | Path to the Python interpreter (virtual environment recommended) | `/usr/bin/python3` | Yes |
 | Script Storage Path | Directory for test scripts and workspace | `/Users/xxx/project/` | Yes |
 | Bash Executable Path | Path to the Shell interpreter | `/bin/bash` | Yes |
-| Working Directory | Path for temporary file output | `/tmp/product/` | Yes |
 
 ## Run a Pentest
 
