@@ -1,4 +1,4 @@
-![](images/head.png)
+![](img/head.png)
 
 # Penligent
 
@@ -39,7 +39,7 @@ sudo dpkg -i penligent.xxx.xxx.deb
 
 For first-time use, you need to configure the required runtime environment.
 
-![](images/Penligent-Doc-2603-YexJbdMfxoEnN6xeDCvcGWJDneh.png)
+![](img/Penligent-Doc-2603-YexJbdMfxoEnN6xeDCvcGWJDneh.png)
 
 | Parameter | Description | Example Value | Required |
 | :--- | :--- | :--- | :--- |
@@ -56,7 +56,7 @@ Click **New Project** on the left to create a pentest project. Project creation 
 
 1. Enter target information and configure task execution options. Fields marked with \* are required. You can select different **Test Type** values based on the task type, allowing the Agent to match different testing strategies.
 
-   ![](images/Penligent-Doc-2603-image-8.png)
+   ![](img/Penligent-Doc-2603-image-8.png)
 
 | Element | Description | Required |
 | ---- | ---- | ---- |
@@ -70,15 +70,15 @@ Click **New Project** on the left to create a pentest project. Project creation 
 
 2. Optionally provide information that helps accelerate testing, such as credentials and key asset targets.
 
-   ![](images/Penligent-Doc-2603-image-4.png)
+   ![](img/Penligent-Doc-2603-image-4.png)
 
 3. Authorization confirmation: confirm that you have compliant authorization for the test target.
 
-   ![](images/Penligent-Doc-2603-image-6.png)
+   ![](img/Penligent-Doc-2603-image-6.png)
 
 4. If the target of the project you are creating is the same as an existing project, an additional Step 4 will appear, asking whether to import information from the existing project into the current project.
 
-   ![](images/Penligent-Doc-2603-image-5.png)
+   ![](img/Penligent-Doc-2603-image-5.png)
 
 ### Pentest Workflow
 
@@ -86,11 +86,11 @@ After you click to create the task, the pentest workflow will begin. The end-to-
 
 1. Perform initial information gathering and plan the overall pentest approach and route (about 5–10 minutes).
 
-![](images/Penligent-Doc-2603-image-7.png)
+![](img/Penligent-Doc-2603-image-7.png)
 
 * To start the pentest, we create a testing task list. This list is a baseline checklist. During the pentest, users can edit tasks, delete them, retest, mark as completed, or skip them.
 
-![](images/Penligent-Doc-2603-image-2.png)
+![](img/Penligent-Doc-2603-image-2.png)
 
 * The overall pentest workflow is controlled in the dialog panel on the right. Users can control the current action by clicking or typing.
 
@@ -100,49 +100,49 @@ Discovered risks are recorded in **Security Findings**, and the execution result
 
 1. After you click re-validation, Penligent matches the vulnerability type to vulnerability verification techniques and tactics (TTPs), performs at least 3 rounds of verification, and provides the verification result.
 
-![](images/Penligent-Doc-2603-image-1.png)
+![](img/Penligent-Doc-2603-image-1.png)
 
 * Penligent has 17 built-in categories of vulnerability verification TTPs, which will be invoked during risk verification. If the current risk cannot be matched to an existing TTP, Penligent will create a new TTP and, after successful verification, store it in the **TTP Library**, where you can view and edit it.
 
-![](images/Penligent-Doc-2603-image-3.png)
+![](img/Penligent-Doc-2603-image-3.png)
 
-![](images/Penligent-Doc-2603-image.png)
+![](img/Penligent-Doc-2603-image.png)
 
 ## Reporting
 
 After the project analysis is completed, you can generate a professional penetration testing report.
 
-![](images/Penligent-Doc-2603-N9pTbzN1QoV9kTxCowMcBhaZnBe.png)
+![](img/Penligent-Doc-2603-N9pTbzN1QoV9kTxCowMcBhaZnBe.png)
 
 ### Generate Report
 
 The system automatically summarizes the analysis results and generates a standardized penetration testing report.
 
-![](images/Penligent-Doc-2603-KO23btRpnos2w3xoVH2ckG2GnSf.png)
+![](img/Penligent-Doc-2603-KO23btRpnos2w3xoVH2ckG2GnSf.png)
 
 ### Edit Report
 
 Online editing is supported. You can add remediation suggestions, adjust risk ratings, and other custom content.
 
-![](images/Penligent-Doc-2603-WMIJbtCUporqQWxjNlecy21knJg.png)
+![](img/Penligent-Doc-2603-WMIJbtCUporqQWxjNlecy21knJg.png)
 
 ### Export Report
 
 Export is supported in both Markdown and PDF formats.
 
-![](images/Penligent-Doc-2603-Rc2nb6ia0ohN39xWLXNcB5KVnve.png)
+![](img/Penligent-Doc-2603-Rc2nb6ia0ohN39xWLXNcB5KVnve.png)
 
 ## Product Tour
 
 ### Enter Settings
 
-![](images/Penligent-Doc-2603-BB5Bb0BegoMrfnxiggXcDh9SnVd.png)
+![](img/Penligent-Doc-2603-BB5Bb0BegoMrfnxiggXcDh9SnVd.png)
 
 Click the settings entry to open the configuration page.
 
 ### Configuration Options
 
-![](images/Penligent-Doc-2603-FLvfbHbvZott03xlhZecqC4znch.png)
+![](img/Penligent-Doc-2603-FLvfbHbvZott03xlhZecqC4znch.png)
 
 ### Other Notes
 
@@ -156,15 +156,15 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 3. **Ask Mode**: Analysis-and-Q&A only. Users can ask questions based on the current pentest tasks and gathered information. In this mode, no tools will be executed.
 
-![](images/Penligent-Doc-2603-image-9.png)
+![](img/Penligent-Doc-2603-image-9.png)
 
 * **Online Search**: In the input box, you can enable online search. When enabled, the system will perform online searches as needed to obtain the latest threat intelligence, vulnerability information, and more.
 
-![](images/Penligent-Doc-2603-image-10.png)
+![](img/Penligent-Doc-2603-image-10.png)
 
 #### (2) Main Page Features
 
-![](images/Penligent-Doc-2603-image-11.png)
+![](img/Penligent-Doc-2603-image-11.png)
 
 1. **Task List**: Shows the task checklist for the current pentest project. Supports editing, deleting, and switching the active task.
 
@@ -178,7 +178,7 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 #### (3) Menu Bar
 
-![](images/Penligent-Doc-2603-image-12.png)
+![](img/Penligent-Doc-2603-image-12.png)
 
 1. **Settings**: Configure the current environment, including Python path, file storage path, etc.
 
@@ -196,9 +196,9 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 Click the top-right corner to open the user center, which includes:
 
-![](images/Penligent-Doc-2603-image-13.png)
+![](img/Penligent-Doc-2603-image-13.png)
 
-![](images/Penligent-Doc-2603-image-14.png)
+![](img/Penligent-Doc-2603-image-14.png)
 
 1. **View Plan**: Go to the official website to view the current membership plan and credit consumption.
 
