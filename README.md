@@ -56,7 +56,7 @@ Click **New Project** on the left to create a pentest project. Project creation 
 
 1. Enter target information and configure task execution options. Fields marked with \* are required. You can select different **Test Type** values based on the task type, allowing the Agent to match different testing strategies.
 
-   ![](img/Penligent-Doc-2603-image-8.png)
+   ![](img/Penligent-Doc-2603-image.png)
 
 | Element | Description | Required |
 | ---- | ---- | ---- |
