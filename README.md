@@ -70,15 +70,15 @@ Click **New Project** on the left to create a pentest project. Project creation 
 
 2. Optionally provide information that helps accelerate testing, such as credentials and key asset targets.
 
-   ![](img/Penligent-Doc-2603-image-4.png)
+   ![](img/Penligent-Doc-2603-image-1.png)
 
 3. Authorization confirmation: confirm that you have compliant authorization for the test target.
 
-   ![](img/Penligent-Doc-2603-image-6.png)
+   ![](img/Penligent-Doc-2603-image-2.png)
 
 4. If the target of the project you are creating is the same as an existing project, an additional Step 4 will appear, asking whether to import information from the existing project into the current project.
 
-   ![](img/Penligent-Doc-2603-image-5.png)
+   ![](img/Penligent-Doc-2603-image-3.png)
 
 ### Pentest Workflow
 
@@ -86,11 +86,11 @@ After you click to create the task, the pentest workflow will begin. The end-to-
 
 1. Perform initial information gathering and plan the overall pentest approach and route (about 5–10 minutes).
 
-![](img/Penligent-Doc-2603-image-7.png)
+![](img/Penligent-Doc-2603-image-4.png)
 
 * To start the pentest, we create a testing task list. This list is a baseline checklist. During the pentest, users can edit tasks, delete them, retest, mark as completed, or skip them.
 
-![](img/Penligent-Doc-2603-image-2.png)
+![](img/Penligent-Doc-2603-image-5.png)
 
 * The overall pentest workflow is controlled in the dialog panel on the right. Users can control the current action by clicking or typing.
 
@@ -98,15 +98,15 @@ After you click to create the task, the pentest workflow will begin. The end-to-
 
 Discovered risks are recorded in **Security Findings**, and the execution results and evidence chain for each associated tool are consolidated. Users can click **Verify** to re-validate a risk.
 
-1. After you click re-validation, Penligent matches the vulnerability type to vulnerability verification techniques and tactics (TTPs), performs at least 3 rounds of verification, and provides the verification result.
+1. After you click Verify, Penligent matches the vulnerability type to vulnerability verification techniques and tactics (TTPs), performs at least 3 rounds of verification, and provides the verification result.
 
-![](img/Penligent-Doc-2603-image-1.png)
+![](img/Penligent-Doc-2603-image-6.png)
 
 * Penligent has 17 built-in categories of vulnerability verification TTPs, which will be invoked during risk verification. If the current risk cannot be matched to an existing TTP, Penligent will create a new TTP and, after successful verification, store it in the **TTP Library**, where you can view and edit it.
 
-![](img/Penligent-Doc-2603-image-3.png)
+![](img/Penligent-Doc-2603-image-7.png)
 
-![](img/Penligent-Doc-2603-image.png)
+![](img/Penligent-Doc-2603-image-8.png)
 
 ## Reporting
 
