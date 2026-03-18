@@ -132,21 +132,9 @@ Export is supported in both Markdown and PDF formats.
 
 ![](img/Penligent-Doc-2603-Rc2nb6ia0ohN39xWLXNcB5KVnve.png)
 
-## Product Tour
+## Other Notes
 
-### Enter Settings
-
-![](img/Penligent-Doc-2603-BB5Bb0BegoMrfnxiggXcDh9SnVd.png)
-
-Click the settings entry to open the configuration page.
-
-### Configuration Options
-
-![](img/Penligent-Doc-2603-FLvfbHbvZott03xlhZecqC4znch.png)
-
-### Other Notes
-
-#### (1) Mode Overview
+### (1) Mode Overview
 
 Penligent supports three modes. **Agent / Manual** can be selected when creating a project:
 
@@ -162,7 +150,7 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 ![](img/Penligent-Doc-2603-image-10.png)
 
-#### (2) Main Page Features
+### (2) Main Page Features
 
 ![](img/Penligent-Doc-2603-image-11.png)
 
@@ -176,7 +164,7 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 5. **Tool Results**: Results of all tools executed during the pentest, including commands, raw outputs, and summaries.
 
-#### (3) Menu Bar
+### (3) Menu Bar
 
 ![](img/Penligent-Doc-2603-image-12.png)
 
@@ -192,7 +180,7 @@ Penligent supports three modes. **Agent / Manual** can be selected when creating
 
 6. **Feedback**: If you have any issues, click to send feedback.
 
-#### (4) User Center
+### (4) User Center
 
 Click the top-right corner to open the user center, which includes:
 
