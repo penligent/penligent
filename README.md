@@ -1,6 +1,6 @@
 ![](img/head.png)
 
-# Penligent
+# How to install Penligent in Kali Linux & MacOS & Windows
 
 The World's First Agentic Al Hacker. But Built For Cyber Security.
 
