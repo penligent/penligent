@@ -1,6 +1,6 @@
 ![](img/head.png)
 
-# Penligent V3.0 launch!
+# Penligent V3.0 Launch!
 
 ## Quick Links
 
