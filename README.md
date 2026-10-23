@@ -1,240 +1,235 @@
 ![](img/head.png)
 
-# How to install Penligent in Kali Linux & MacOS & Windows
-
-The World's First Agentic Al Hacker. But Built For Cyber Security.
+# Penligent User Guide
 
 ## Quick Links
 
-- **Website**: `https://penligent.ai`
-- **Community / Contact (Discord)**: `https://discord.gg/3vxXqvQUX7`
+- Website: [https://penligent.ai](https://penligent.ai)
+- Community and contact (Discord): [https://discord.gg/3vxXqvQUX7](https://discord.gg/3vxXqvQUX7)
 
-## Get Started
+## Quick Start
 
 ### Install
 
-Recommended: Kali Linux.
+Kali Linux is recommended. Download the version that matches your operating system and processor architecture:
 
-#### Windows (x64 only)
+- **Windows (x64 only):** Download the Windows installer and double-click the `.exe` file. If a Windows security prompt appears, verify the source and choose to continue running it.
+- **macOS (ARM only):** Download and open the `.dmg` file, drag Penligent into the Applications folder, then launch it from Applications.
+- **Linux (ARM and AMD):** Download the AMD64 or ARM64 `.deb` package for your device, then run:
 
-1. Double-click the downloaded `penligent.xxx.xxx.exe` file.
+  ```bash
+  sudo dpkg -i penligent.xxx.xxx.deb
+  ```
 
-2. If a Windows security warning pops up, click **Run anyway**.
+### Configure the Python Environment
 
-#### macOS (ARM only)
+On first use, configure the Python environment Penligent uses to run tools.
 
-1. Double-click the downloaded `penligent.xxx.xxx.dmg` file.
+![Python environment settings](img/image.png)
 
-2. Drag the app into the **Applications** folder.
+1. Enter the full path to the Python executable in **Python Executable Path**, or click the folder icon to browse for it.
+2. Make sure the path points to the intended Python environment. An incorrect path may cause tool execution to fail.
+3. Click **Save** to apply the setting, or **Cancel** to discard your changes.
 
-3. Double-click the app to launch.
+### Create a Penetration Testing Project
 
-#### Linux (ARM & AMD compatible)
+Create a project and specify an authorized target before starting a test.
 
-```bash
-sudo dpkg -i penligent.xxx.xxx.deb
-```
+![Create a penetration testing project](img/image-1.png)
 
-### Config
+1. Click **New Project** in the top bar or project sidebar.
+2. Enter a project name in **Project Name**.
+3. Enter an authorized domain, hostname, or IP address in **Test Target**.
+4. Choose a testing plan from the **Skill Selection** menu. The screenshot shows **Comprehensive Deep Testing (CDT)** as the default.
+5. Confirm that you have legal authorization to test the target.
+6. Click **Confirm and Create Project**. The project will appear in the project list.
 
-For first-time use, you need to configure the required runtime environment.
+#### Project Creation Fields
 
-![](img/Penligent-Doc-2603-YexJbdMfxoEnN6xeDCvcGWJDneh.png)
+| Field / Control | Required | Description | Example / Notes |
+| --- | --- | --- | --- |
+| Project Name | Yes | The project name used to identify and manage the penetration testing project. | `Corporate Website Security Test` |
+| Test Target | Yes | The target for this test. Enter a domain name, hostname, or IP address. | `example.com` or `192.168.1.100` |
+| Skill Selection | Yes | Select the skill or testing plan to use for this test. | Defaults to `Comprehensive Deep Testing (CDT)`; use the drop-down menu to change it. |
+| Confirm and Create Project | Confirmation and button | Confirm that you are authorized to test the target, then click the button to create the project. | Do not test targets without authorization. |
 
-| Parameter | Description | Example Value | Required |
-| :--- | :--- | :--- | :--- |
-| Python Executable Path | Path to the Python interpreter (virtual environment recommended) | `/usr/bin/python3` | Yes |
-| Script Storage Path | Directory for test scripts and workspace | `/Users/xxx/project/` | Yes |
-| Bash Executable Path | Path to the Shell interpreter | `/bin/bash` | Yes |
+### Interact with a Task Using the Agent Console
 
-## Run a Pentest
+Use the Agent Console to send questions, context, and follow-up instructions to agents, and to review their responses and task updates.
 
-### New Project
+![Agent Console conversation and testing directions](img/image-7.png)
 
-Click **New Project** on the left to create a pentest project. Project creation is split into multiple steps to supplement and confirm information.
+- Review task statuses, queued testing directions, and information returned by agents in the conversation.
+- Enter a question, business context, or additional instruction in the message box, then send it.
+- Type `@` to mention a specific Agent or Keyfinding.
+- Keep any scope updates within the authorized targets. A queued status in the Agent Console does not necessarily mean the task has started.
 
-1. Enter target information and configure task execution options. Fields marked with \* are required. You can select different **Test Type** values based on the task type, allowing the Agent to match different testing strategies.
+## Feature Guide
 
-   ![](img/Penligent-Doc-2603-image.png)
+The project navigation bar provides views for the project overview, agent work status, target overview, attack path management, key findings, and tool results. Use **Export Report** on a project page to export a report for that project.
 
-| Element | Description | Required |
-| ---- | ---- | ---- |
-| Project Name | Unique identifier for the project (supports Chinese/English) | Yes |
-| Test Target | Target URL, IP, or IP range for pentesting | Yes |
-| Test Type | The type of pentest, such as agent test or general penetration testing | Yes |
-| Description | Custom project description or additional notes | No |
-| Mode | **Agent Mode**: AI decides strategy; **Manual Mode**: User controls steps | No |
-| Automatically Filter API Risks  | Enable to fetch target API interfaces and perform initial scanning | No |
-| Analysis Depth | API crawling depth; higher levels offer more comprehensive coverage | No |
+### Global Overview
 
-2. Optionally provide information that helps accelerate testing, such as credentials and key asset targets.
+![Global overview dashboard](img/image-2.png)
 
-   ![](img/Penligent-Doc-2603-image-1.png)
+Use the global overview to review risk and asset status across projects:
 
-3. Authorization confirmation: confirm that you have compliant authorization for the test target.
+- **Total projects:** The number of projects currently tracked.
+- **Active agents:** The number of agents currently active.
+- **Total risks:** The total number of risks and their severity distribution, including Critical, High, Medium, and Low.
+- **Risk posture:** Risk severity distribution and discovery trend for the selected period.
+- **Asset security posture:** Total assets, at-risk assets, and their highest risk severity.
+- Use the time-range menu to change the reporting period, then click **Refresh** to update the data.
+- Select a project in the left sidebar to open its overview.
 
-   ![](img/Penligent-Doc-2603-image-2.png)
+### Project Overview
 
-4. If the target of the project you are creating is the same as an existing project, an additional Step 4 will appear, asking whether to import information from the existing project into the current project.
+#### Project Summary
 
-   ![](img/Penligent-Doc-2603-image-3.png)
+![Project overview and Agent Console](img/image-3.png)
 
-### Pentest Workflow
+Select a project from the **Projects** list to review its current testing activity:
 
-After you click to create the task, the pentest workflow will begin. The end-to-end pentest process consists of the following steps:
+- The project summary shows the project name, test target, and creation time.
+- **Agent executions** shows agent activity; **Risks found** shows discovered risks by severity.
+- **Agents currently running** and **Recently discovered risks** show the latest agents and findings. Click **View all** to open the corresponding list.
+- **Attack Graph** summarizes discovered attack paths. Click **View details** to see more; an empty state is shown when no paths have been found.
+- Click **Export Report** to export a report for the project.
 
-1. Perform initial information gathering and plan the overall pentest approach and route (about 5–10 minutes).
+### Agent Work Status
 
-![](img/Penligent-Doc-2603-image-4.png)
+#### View the Task Queue
 
-* To start the pentest, we create a testing task list. This list is a baseline checklist. During the pentest, users can edit tasks, delete them, retest, mark as completed, or skip them.
+![Agent work status and task queue](img/image-8.png)
 
-![](img/Penligent-Doc-2603-image-5.png)
+- The queue summary shows task counts for **Running**, **Interrupted**, **Completed**, **Ended**, and **Total**.
+- Each task entry shows the agent name, status, task description, and elapsed time.
+- Select a task entry to expand its details.
+- Use the stop control beside an individual task to stop it, or click **Interrupt Task** to interrupt the current run.
+- Click the refresh control near the queue summary to reload the status.
 
-* The overall pentest workflow is controlled in the dialog panel on the right. Users can control the current action by clicking or typing.
+#### Review Task Findings and Action Trail
 
-### Validate Findings
+![Agent task details, key findings, and action trail](img/image-9.png)
 
-Discovered risks are recorded in **Security Findings**, and the execution results and evidence chain for each associated tool are consolidated. Users can click **Verify** to re-validate a risk.
+When a task is expanded, you can review:
 
-1. After you click Verify, Penligent matches the vulnerability type to vulnerability verification techniques and tactics (TTPs), performs at least 3 rounds of verification, and provides the verification result.
+- **Key Findings:** Findings associated with the task and their count. `No key findings` or a count of `0` means none have been recorded yet.
+- **Action trail:** Actions recorded while the task was created and executed. Use the control beside the section title to expand or collapse it.
+- The task details area may contain additional execution information; scroll within the area to review it.
 
-![](img/Penligent-Doc-2603-image-6.png)
+### Target Overview
 
-* Penligent has 17 built-in categories of vulnerability verification TTPs, which will be invoked during risk verification. If the current risk cannot be matched to an existing TTP, Penligent will create a new TTP and, after successful verification, store it in the **TTP Library**, where you can view and edit it.
+![Target overview, network information, and web application information](img/image-5.png)
 
-![](img/Penligent-Doc-2603-image-7.png)
+The target overview displays information collected about the test target:
 
-![](img/Penligent-Doc-2603-image-8.png)
+- **Target Info:** Test target, target type, location, cloud provider, region, ASN, subnet, IP addresses, and domains.
+- **Network Info:** Open ports and services, DNS records, reverse DNS, and WAF/CDN detection results.
+- **Web App Info:** Detected technology stack and TLS certificate details, such as subject, issuer, validity period, and fingerprint.
+- A value of `-` or `No data` means that information is not currently available. Discovery results may appear after the task runs.
+- Click **Export Report** in the upper-right corner to export the project report.
 
-## Reporting
+### Attack Path Management
 
-After the project analysis is completed, you can generate a professional penetration testing report.
+![Attack graph, candidate paths, and path information](img/image-18.png)
 
-![](img/Penligent-Doc-2603-N9pTbzN1QoV9kTxCowMcBhaZnBe.png)
+Attack Path Management visualizes relationships between risk nodes and provides candidate path review and verification:
 
-### Generate Report
+1. Review risk, credential, and other nodes and their relationships in the **Attack Graph** on the left. Click a node to view paths associated with it.
+2. Select a candidate path from the **Path Selection** list on the right. The graph highlights the selected path, and the right panel displays the corresponding node information and path details.
+3. Review verification information for the selected path in the **Path Information** area below. If the path has not been verified or no results are available, a message indicates that no verification information is available.
+4. Click **Verify** to start verification of the selected path. The verification process and results appear in the **Path Information** area.
+5. Click **Fit Graph** to fit the graph to the available viewing area.
 
-The system automatically summarizes the analysis results and generates a standardized penetration testing report.
+### Key Findings
 
-![](img/Penligent-Doc-2603-KO23btRpnos2w3xoVH2ckG2GnSf.png)
+![Key findings list and risk filters](img/image-10.png)
 
-### Edit Report
+Use Key Findings to filter, inspect, and manage risks identified in the project:
 
-Online editing is supported. You can add remediation suggestions, adjust risk ratings, and other custom content.
+- Search by finding name, description, or target.
+- Use **All Risks**, **Ignored Risks**, **Verifying**, or **Credentials** to filter by status or category.
+- Use **Critical**, **High**, **Medium**, **Low**, and **INFO** to filter by severity. The numbers beside the filters show the matching counts.
+- Review each risk's title, severity, verification status, description, and affected target.
+- Click **Verify** to mark a risk for verification, or **Ignore** to move it to the ignored risks list.
+- Expand a risk card to view its details.
 
-![](img/Penligent-Doc-2603-WMIJbtCUporqQWxjNlecy21knJg.png)
+![Key finding details, remediation, and evidence](img/image-11.png)
 
-### Export Report
+An expanded risk may include the description, verification details, remediation guidance, and evidence:
 
-Export is supported in both Markdown and PDF formats.
+- **Risk Verification Process:** Review the verification process or data, when available.
+- **Remediation:** Review the suggested remediation steps.
+- **Evidence/PoC:** Review evidence or proof-of-concept material supporting the finding, when available.
+- Available actions depend on the risk's current status. Use **Verify** or **Ignore** to update its handling status.
 
-![](img/Penligent-Doc-2603-Rc2nb6ia0ohN39xWLXNcB5KVnve.png)
+#### Export a Single Risk Report
 
-## Other Notes
+![Export a single risk report](img/image-13.png)
 
-### (1) Mode Overview
+1. Click the export control in the risk details to open the **Export Risk** dialog.
+2. Select an available format from **Export Format**, such as **PDF (.pdf)** shown in the screenshot.
+3. Click **Start Export**. The browser downloads the file when it is ready.
+4. Click **Cancel** to cancel the export.
 
-Penligent supports three modes. **Agent / Manual** can be selected when creating a project:
+### Tool Results
 
-1. **Agent Mode**: Default mode. The system performs the pentest automatically, and the user manually confirms at key points.
+![Tool execution results](img/image-12.png)
 
-2. **Manual Mode**: Manual, step-by-step confirmation. During the process, all tool commands can be edited by the user.
+Use Tool Results to review records returned by tools called by agents:
 
-3. **Ask Mode**: Analysis-and-Q&A only. Users can ask questions based on the current pentest tasks and gathered information. In this mode, no tools will be executed.
+- Review the tool name, execution status, and summary at the top of each result entry.
+- Expand a result to view its **Summary**, **Command**, **Purpose**, start time, and duration.
+- Review **Command Executed** and **Output** to see the executed command and its returned content.
+- The total number of result entries appears at the top of the page. Results depend on the tools that ran and the data they returned.
+- Click **Export Report** to export the project report.
 
-![](img/Penligent-Doc-2603-image-9.png)
+### Asset Management
 
-* **Online Search**: In the input box, you can enable online search. When enabled, the system will perform online searches as needed to obtain the latest threat intelligence, vulnerability information, and more.
+![Asset management list](img/image-14.png)
 
-![](img/Penligent-Doc-2603-image-10.png)
+Asset Management provides a centralized view of discovered test assets and related data:
 
-### (2) Main Page Features
+- Enter a domain or IP address in the search box to filter the assets.
+- **Target** shows the asset target; **Asset description** shows its description, when available.
+- **Risk statistics (verified)** shows the severity and count of verified risks.
+- **Credential information (masked)** shows masked credential-related information. Sensitive values are obscured.
+- Click **View task** to open the task associated with the asset.
+- Click **Verify again** to create a verification task for the target. Confirm that you still have authorization before starting it.
+- Click **Refresh** to reload the asset list.
 
-![](img/Penligent-Doc-2603-image-11.png)
+### Scheduled Tasks
 
-1. **Task List**: Shows the task checklist for the current pentest project. Supports editing, deleting, and switching the active task.
+![Add a scheduled task](img/image-15.png)
 
-2. **Target Overview**: Full information about the current target, including related assets, network info, Web App info, etc. Any credentials you pre-configured are also shown here.
+Create a scheduled test from **Scheduled tasks**:
 
-3. **Threat Map**: A visualization of all weaknesses for the current target, including sensitive paths, critical API endpoints, and discovered risks.
+1. Enter a **Plan name** and **Test target**, then select a testing plan under **Skill**.
+2. Choose a **Task mode**:
+   - **New project:** Start from scratch without reusing data from previous tasks.
+   - **Verify again:** Run the test again using credential information.
+3. Under **Execution**, choose **Once** or **Weekly**.
+4. Set the run time based on the selected execution option. The screenshot shows **Run at** for the **Once** option.
+5. Click **Create plan** to create the schedule, or **Cancel** to discard it.
 
-4. **Security Findings**: All security risks found in the current project, grouped by severity (Critical / High / Medium / Low / INFO). You can click **Verify** here to re-validate a risk. Tool execution results and evidence chains associated with each risk are also displayed here.
+### Export a Project Report
 
-5. **Tool Results**: Results of all tools executed during the pentest, including commands, raw outputs, and summaries.
+![Export a project report](img/image-16.png)
 
-### (3) Menu Bar
+1. Click **Export Report** on the project page to open the report export dialog.
+2. Select an available format under **Export Format**. The screenshot shows **PDF (.pdf)** for project reports.
+3. Click **Start Export**. The browser downloads the file when it is ready.
+4. Click **Cancel** to cancel the operation.
 
-![](img/Penligent-Doc-2603-image-12.png)
+### Settings
 
-1. **Settings**: Configure the current environment, including Python path, file storage path, etc.
+![Application settings](img/image-17.png)
 
-2. **TTP Library**: A list of vulnerability verification techniques and tactics (TTPs).
+Use **Settings** to adjust application preferences and check version information:
 
-3. **Toolbox**: Small utilities that pentest engineers may use (more features coming).
-
-4. **Website**: Click to open the official website.
-
-5. **Light Mode / Dark Mode**: Switch between light and dark themes.
-
-6. **Feedback**: If you have any issues, click to send feedback.
-
-### (4) User Center
-
-Click the top-right corner to open the user center, which includes:
-
-![](img/Penligent-Doc-2603-image-13.png)
-
-![](img/Penligent-Doc-2603-image-14.png)
-
-1. **View Plan**: Go to the official website to view the current membership plan and credit consumption.
-
-2. **Login / Logout**: Sign in / sign out.
-
-3. **Font Size**: Adjust overall font size.
-
-4. **Language**: Set the UI language.
-
-5. **Theme**: Configure theme mode.
-
-## FAQ
-
-### Installation Issues
-
-**Q: Windows installation fails with an “insufficient permissions” message?**
-
-> A: Right-click the installer and select **Run as administrator**.
-
-**Q: The application cannot be opened after installation on Linux?**
-
-> A:
-1 Do not install the application as the root user in the terminal. Instead, install it using your logged-in user with the sudo command.
-2 The issue may be caused by missing dependencies. Install the required dependencies according to the prompt, or install common dependencies using:
-```
-sudo apt install -f
-```
-
-### Login Issues
-
-**Q: Not receiving the verification email?**
-
-> A: 1) Check the spam folder; 2) confirm the email address is correct; 3) try resending.
-
-**Q: The application cannot open the login web page?**
-
-> Check whether the browser was opened but failed to redirect properly.
-The issue may be caused by the local network. Try checking or switching your network connection.
-You can also try temporarily disabling local IPv6:
-sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
-sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
-
-
-### Usage Issues
-
-**Q: Scanning is too slow?**
-
-> A: 1) Reduce analysis depth; 2) narrow the testing scope; 3) check network connectivity.
-
-**Q: Report export fails?**
-
-> A: 1) Check disk space; 2) try a different export format; 3) restart the app and try again.
+- **User Login:** View the signed-in user and click **Logout** to sign out.
+- **Font Size:** Click **A−** or **A+** to adjust the interface font size. The current adjustment is shown between the buttons.
+- **Language:** Select the interface language from the drop-down menu.
+- **Theme:** Switch between **Dark Mode** and **Light Mode**.
+- **Current Version:** View the installed version and click **Check Update** to check for updates.
